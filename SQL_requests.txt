@@ -1,0 +1,21 @@
+-- p1_1
+select * from l3.products;
+
+-- p1_2
+select name, phone from l3.shippers;
+
+-- p2
+select avg(price), min(price), max(price) from l3.products;
+
+-- p3
+select distinct category_id, price from l3.products
+order by price
+limit 10;
+
+-- p4
+select count(price) from l3.products
+where price >= 20 and price <= 100;
+
+-- p5
+select supplier_id, count(id), avg(price) from l3.products
+group by supplier_id;
